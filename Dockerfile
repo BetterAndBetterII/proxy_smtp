@@ -1,6 +1,6 @@
 # ---- 构建阶段 ----
 # 使用官方的 Go Alpine 镜像作为构建环境，以获得更小的基础镜像
-FROM golang:1.22-alpine AS builder
+FROM golang:1.24-alpine AS builder
 
 # 设置必要的环境变量，用于交叉编译一个静态的Linux可执行文件
 ENV CGO_ENABLED=0
