@@ -39,10 +39,6 @@ WORKDIR /app
 # 从构建阶段复制编译好的二进制文件
 COPY --from=builder /proxy-smtp /proxy-smtp
 
-# 复制运行时需要的证书文件
-COPY cert.pem ./
-COPY key.pem ./
-
 # 暴露容器的端口。
 # 这只是元数据，实际端口映射在 docker run 时指定。
 # 这里的端口应与 PROXY_LISTEN_ADDR 中的端口一致。
